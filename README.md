@@ -251,4 +251,21 @@ if($error){
     return error($error);
 }
 ```
-On the other hand, if the result of `->try()` is valid, the `or <expression>` is not executed and the generator keeps running until it reaches the next `yield error` statement, the next `return` statement or until the generator is consumed. 
+On the other hand, if the result of `->try()` is valid, the `or <expression>` is not executed and the generator keeps running until it reaches the next `yield error` statement, the next `return` statement or until the generator is consumed.
+
+
+# Matching
+
+Now that my errors are results, I can actually `match()` them
+
+```php
+$result = anyError(/* ... */)->try($error) or match($error:class){
+    FileNotFoundError::class => $error->getMessage(),
+    default => "Let me explain something to you. Um, I am not Mr. Lebowski. You're Mr. Lebowski.",
+
+};
+```
+
+or apply any sort of expression that I want _inline_.
+
+Who knows, maybe in the future we'll even get some advanced pattern matching in php - I think that would fit perfectly with _Unsafe<T>_.
