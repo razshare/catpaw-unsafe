@@ -24,8 +24,9 @@
   },
   "authors": [
     {
-      "name": "Razvan",
-      "email": "tangent.jotey@gmail.com"
+      "name": "Razvan Tanase",
+      "email": "tangent.jotey@gmail.com",
+      "homepage": "https://razshare.dev"
     }
   ],
   "require-dev": {
