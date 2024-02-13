@@ -1,0 +1,35 @@
+{
+  "name": "catpaw/unsafe",
+  "description": "Manage errors using Unsafe<T>",
+  "type": "library",
+  "license": "MIT",
+  "scripts": {
+    "load": "composer dump-autoload -o && pre-commit autoupdate",
+    "prod:test": "php vendor/bin/phpunit tests",
+    "dev:test": "php -dxdebug.mode=debug -dxdebug.start_with_request=yes vendor/bin/phpunit tests",
+    "dev:precommit": "pre-commit install && pre-commit autoupdate"
+  },
+  "autoload": {
+    "psr-4": {
+      "CatPaw\\Unsafe\\": "src/lib"
+    },
+    "files": [
+      "src/functions.php"
+    ]
+  },
+  "autoload-dev": {
+    "files": [
+      "tests/functions.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Razvan",
+      "email": "tangent.jotey@gmail.com"
+    }
+  ],
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.8",
+    "phpunit/phpunit": "^9"
+  }
+}
