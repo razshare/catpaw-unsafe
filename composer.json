@@ -6,6 +6,7 @@
   "scripts": {
     "load": "composer dump-autoload -o && pre-commit autoupdate",
     "prod:test": "php vendor/bin/phpunit tests",
+    "prod:fix": "php -dxdebug.mode=off ./vendor/bin/php-cs-fixer fix .",
     "dev:test": "php -dxdebug.mode=debug -dxdebug.start_with_request=yes vendor/bin/phpunit tests",
     "dev:precommit": "pre-commit install && pre-commit autoupdate"
   },
