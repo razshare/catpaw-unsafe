@@ -266,4 +266,4 @@ $result = anyError(/* ... */)->try($error) or match($error:class){
 };
 ```
 
-or apply any sort of expression that I want _inline_.
+or apply any sort of expression that you want _inline_.
