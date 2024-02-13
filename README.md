@@ -7,7 +7,7 @@ composer require catpaw/unsafe
 
 I am of the opinion that control flow is one of the most important things to deal with as a programmer, it affects my thinking and at times it actually guides my problem solving process.
 
-Managing errors should not break the flow in which I control my program, I shouldn't have to jump up and down around my file (sometimes entire screens) to catch a new exception introduced by a new function I just invoked 20 lines above.
+Managing errors should not break the flow in which I control my program, I shouldn't have to jump up and down around my file to catch a new exception introduced by a new function I just invoked 20 lines above.
 
 
 # Try/Catch
@@ -26,7 +26,7 @@ try {
 }
 ```
 
-or even worse
+or even
 
 ```php
 try {
@@ -36,9 +36,7 @@ try {
 }
 ```
 
-Some IDEs actually suggest you do this by default!
-
-It might make sense in theory, but in practice those exceptions might each mean something different, a different cause for an error.
+The last one might make sense in theory, but in practice those exceptions might each mean something different, a different cause for an error.
 
 The reality is that very often I lump those exceptions in together because I forget to manage them or because for some reason at 4 AM I decide on the spot "yes, I should let my IDE dictate my error management".
 
