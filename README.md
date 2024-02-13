@@ -35,10 +35,10 @@ Some IDEs actually suggest you do this by default!
 
 It might make sense in theory, but in practice those exceptions might each mean something different, a different cause for an error.
 
-The reality is that very often I lump those exceptions in together because I forget to manage them or because for some reason at 4AM I decide on the spot "yes, I should let my IDE dictate my error management".
+The reality is that very often I lump those exceptions in together because I forget to manage them or because for some reason at 4 AM I decide on the spot "yes, I should let my IDE dictate my error management".
 
 
-Try/catch error handling has been (probably) the most popular way to manage errors in php, and I think it still is a valid way of dealing with errors in a global.
+Try/catch error handling has been (probably) the most popular way to manage errors in php, and I think it still is a valid way of dealing with errors in a global scope.
 
 I can't argue there is something nice about having one centralized place to manage all errors, but I don't want to be forced to approach error management all the time in that manner.
 
