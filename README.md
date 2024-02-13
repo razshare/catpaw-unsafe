@@ -256,7 +256,7 @@ On the other hand, if the result of `->try()` is valid, the `or <expression>` is
 
 # Matching
 
-Now that my errors are results, I can actually `match()` them
+Since errors are results, you can actually `match()` them
 
 ```php
 $result = anyError(/* ... */)->try($error) or match($error:class){
@@ -267,5 +267,3 @@ $result = anyError(/* ... */)->try($error) or match($error:class){
 ```
 
 or apply any sort of expression that I want _inline_.
-
-Who knows, maybe in the future we'll even get some advanced pattern matching in php - I think that would fit perfectly with _Unsafe<T>_.
