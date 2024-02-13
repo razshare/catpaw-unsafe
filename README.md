@@ -45,9 +45,6 @@ I can't argue there is something nice about having one centralized place to mana
 
 If you're anything like me you might prefer managing your error inline, directly at the source, so that you deal with it when it pops up and then you don't have to think about it anymore.
 
-> [!NOTE]
-> Until QA says otherwise, obviously.
-
 # Unsafe<T>
 
 I have a solution.
