@@ -1,3 +1,8 @@
+Install with
+```sh
+composer require catpaw/unsafe
+```
+
 # Control flow is king
 
 I am of the opinion that control flow is one of the most important things to deal with as a programmer, it affects my thinking and at times it actually guides my problem solving process.
