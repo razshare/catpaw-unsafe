@@ -249,21 +249,3 @@ if($error){
 }
 ```
 On the other hand, if the result of `->try()` is valid, the `or <expression>` is not executed and the generator keeps running until it reaches the next `yield error` statement, the next `return` statement or until the generator is consumed. 
-
-> [!NOTE]
-> When the _Unsafe_ object unwraps an error with `->try($error)`, the `or <expression>` is triggered in response to the `null` value returned by `->try($error)`.\
-> \
-> Technically, the `or <expression>` can trigger for any falsy value unwrapped, like `false` or `0`.\
-> In those cases you will need to specifically check that the _$error_ is actually set.
->
-> So this part
-> ```php
-> $contents = readFile($file)->try($error)
-> or yield $error;
-> ```
-> becomes
-> ```php
-> $contents = readFile($file)->try($error)
-> or $error // <=== this will ensure the error is set...
-> and yield $error; // ...and only then it will yield the error and stop execution.
-> ```
