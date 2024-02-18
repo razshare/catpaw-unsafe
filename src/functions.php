@@ -73,11 +73,13 @@ function anyError(callable $function): Unsafe {
             return error($value->error);
         }
     }
-
+    
     try {
         $return = $result->getReturn() ?? true;
 
-        if ($return instanceof Unsafe) {
+        if ($return instanceof Error) {
+            return error($return);
+        } else if ($return instanceof Unsafe) {
             return $result;
         }
 
